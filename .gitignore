@@ -1,0 +1,19 @@
+.DS_Store
+composer.phar
+composer.lock
+###> symfony/framework-bundle ###
+.env
+/public/bundles/
+/var/
+/vendor/
+symfony.lock
+###< symfony/framework-bundle ###
+
+###> symfony/web-server-bundle ###
+.web-server-pid
+###< symfony/web-server-bundle ###
+
+###> symfony/phpunit-bridge ###
+.phpunit
+/phpunit.xml
+###< symfony/phpunit-bridge ###

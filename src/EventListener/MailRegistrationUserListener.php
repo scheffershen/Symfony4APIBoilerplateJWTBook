@@ -1,0 +1,45 @@
+<?php
+
+namespace App\EventListener;
+
+use Symfony\Component\HttpFoundation\Response;
+use App\Event\EmailRegistrationUserEvent;
+
+class MailRegistrationUserListener
+{
+    public function __construct(\Twig_Environment $twig, \Swift_Mailer $mailer)
+    {
+        $this->twig = $twig;
+        $this->mailer = $mailer;
+    }
+
+    public function onMailRegistrationUserEvent(EmailRegistrationUserEvent $event): void
+    {
+        $user = $event->getUser();
+        $email = $event->getUser()->getEmail();
+        $password = $event->getUser()->getPassword();
+        $name = $event->getUser()->getName();
+
+        $body = $this->renderTemplate($name, $email);
+
+		$message = (new \Swift_Message('Registration User Successfully!'))
+            ->setFrom($email)
+            ->setTo($email)
+            ->setBody($body, 'text/html')
+        ;
+
+        $this->mailer->send($message);
+    }
+
+    public function renderTemplate($name, $email)
+    {
+		return $this->twig->render(
+            'emails/registration.html.twig',
+            [
+                'name' => $name,
+				'email' => $email
+            ]
+        );
+    }
+
+}

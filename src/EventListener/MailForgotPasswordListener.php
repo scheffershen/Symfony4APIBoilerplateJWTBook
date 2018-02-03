@@ -7,6 +7,10 @@ use App\Event\EmailForgotPasswordEvent;
 
 class MailForgotPasswordListener
 {
+    protected $twig;
+
+    protected $mailer;
+
     public function __construct(\Twig_Environment $twig, \Swift_Mailer $mailer)
     {
         $this->twig = $twig;
@@ -31,7 +35,7 @@ class MailForgotPasswordListener
         $this->mailer->send($message);
     }
 
-    public function renderTemplate($name, $password, $email)
+    protected function renderTemplate($name, $password, $email): string
     {
 		return $this->twig->render(
             'emails/forgotPassword.html.twig',

@@ -7,6 +7,10 @@ use App\Event\EmailRegistrationUserEvent;
 
 class MailRegistrationUserListener
 {
+    protected $twig;
+
+    protected $mailer;
+
     public function __construct(\Twig_Environment $twig, \Swift_Mailer $mailer)
     {
         $this->twig = $twig;
@@ -31,7 +35,7 @@ class MailRegistrationUserListener
         $this->mailer->send($message);
     }
 
-    public function renderTemplate($name, $email)
+    protected function renderTemplate($name, $email): string
     {
 		return $this->twig->render(
             'emails/registration.html.twig',

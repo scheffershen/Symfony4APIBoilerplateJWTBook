@@ -7,6 +7,7 @@ composer.lock
 /var/
 /vendor/
 symfony.lock
+config/jwt
 ###< symfony/framework-bundle ###
 
 ###> symfony/web-server-bundle ###

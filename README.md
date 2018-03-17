@@ -10,6 +10,12 @@ Simple Example Api Rest Book with Symfony 4.0 and Json Web Token
     $ php composer.phar install or composer install
 ```
 
+## Setting Environment
+
+```
+    $ cp .env.dist .env
+```
+
 ## Generate the SSH keys
 
 ```

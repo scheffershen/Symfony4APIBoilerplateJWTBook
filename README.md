@@ -19,9 +19,9 @@ Simple Example Api Rest Book with Symfony 4.2 and Json Web Token
 ## Generate the SSH keys
 
 ```
-	$ mkdir config/jwt
-	$ openssl genrsa -out config/jwt/private.pem -aes256 4096
-	$ openssl rsa -pubout -in config/jwt/private.pem -out config/jwt/public.pem
+    $ mkdir config/jwt
+    $ openssl genrsa -out config/jwt/private.pem -aes256 4096
+    $ openssl rsa -pubout -in config/jwt/private.pem -out config/jwt/public.pem
 ```
 
 ## Getting phpunit

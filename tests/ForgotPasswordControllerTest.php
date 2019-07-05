@@ -25,8 +25,8 @@ class ForgotPasswordControllerTest extends WebTestCase
                 'adminpass'
             ],
             'json' => [
-                'email' => 'myemail@example.com',
-                'token' => 'my_token',
+                'email' => 'tony_admin@example.com',
+                'token' => 'ab345566cdfghjikl1234567890',
             ]
         ]);
 

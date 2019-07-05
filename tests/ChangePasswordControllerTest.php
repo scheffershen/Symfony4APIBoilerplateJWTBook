@@ -25,9 +25,9 @@ class ChangePasswordControllerTest extends WebTestCase
                 'admin'
             ],
             'json' => [
-                'email' => 'myemail@example.com',
+                'email' => 'tony_admin@example.com',
                 'password' => '0123456789',
-                'token' => 'my_token',
+                'token' => 'ab345566cdfghjikl1234567890',
             ]
         ]);
 

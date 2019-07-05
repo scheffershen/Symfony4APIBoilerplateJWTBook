@@ -19,7 +19,7 @@ class LoginController extends Controller
      */
     public function newTokenAction(Request $request): JsonResponse
     {
-        $user = $this->getDoctrine()->getRepository(User::class)->findOneBy(['username'=> $request->getUser()]);
+        $user = $this->getDoctrine()->getRepository(User::class)->findOneBy(['username' => $request->getUser()]);
 
         if (!$user) {
             throw $this->createNotFoundException();

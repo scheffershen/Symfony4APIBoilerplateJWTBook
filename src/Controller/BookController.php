@@ -34,7 +34,7 @@ class BookController extends FOSRestController
 	/**
 	 * @Route("/books/{id}", name="get_book")
      */
-    public function getBookAction(int $id): ?object
+    public function getBookAction(int $id): ?Book
     {
         if (!$id) {
             throw new HttpException(400, "Invalid id");
@@ -53,7 +53,7 @@ class BookController extends FOSRestController
 	/**
 	 * @Route("/book/new", name="post_book")
      */
-    public function postBookAction(Request $request): ?object
+    public function postBookAction(Request $request): ?Book
     {
         $book = new Book();
         $form = $this->createForm(BookType::class, $book);
@@ -73,7 +73,7 @@ class BookController extends FOSRestController
 	/**
 	 * @Route("/books/edit/{id}", name="put_book")
 	 */
-    public function putBookAction(Request $request, int $id): ?object
+    public function putBookAction(Request $request, int $id): ?Book
     {
         $em = $this->getDoctrine()->getManager();
         $book = $em->getRepository(Book::class)->find($id);
@@ -93,7 +93,7 @@ class BookController extends FOSRestController
 	/**
 	 * @Route("/books/remove/{id}", name="delete_book")
 	 */
-    public function deleteBookAction(int $id): ?object
+    public function deleteBookAction(int $id): ?Book
     {
         $em = $this->getDoctrine()->getManager();
         $book = $em->getRepository(Book::class)->find($id);

@@ -1,7 +1,7 @@
 # Symfony4APIBoilerplateJWTBook
 [![Build Status](https://travis-ci.org/Tony133/Symfony4APIBoilerplateJWTBook.svg?branch=master)](https://travis-ci.org/Tony133/Symfony4APIBoilerplateJWTBook)
 
-Simple Example Api Rest Book with Symfony 4.4 and Json Web Token
+Simple Example Api Rest Book with Symfony 4.4 LTS and Json Web Token
 
 ## Install with Composer
 

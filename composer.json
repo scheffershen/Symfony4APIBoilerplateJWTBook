@@ -1,6 +1,6 @@
 {
     "name": "tony133/symfony4-api-boilerplate-jwt-book",
-    "description": "Simple Example Api Rest Book with Symfony 4.4 and Json Web Token",
+    "description": "Simple Example Api Rest Book with Symfony 4.4 LTS and Json Web Token",
     "type": "project",
     "license": "MIT",
     "require": {

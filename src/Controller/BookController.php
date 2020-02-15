@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use FOS\RestBundle\Controller\FOSRestController;
+use FOS\RestBundle\Controller\AbstractFOSRestController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -14,7 +14,7 @@ use App\Form\BookType;
 /**
  * @Route("/api")
  */
-class BookController extends FOSRestController
+class BookController extends AbstractFOSRestController
 {
 	/**
 	 * @Route("/books", name="get_books")

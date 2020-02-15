@@ -7,14 +7,14 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use FOS\RestBundle\Controller\FOSRestController;
+use FOS\RestBundle\Controller\AbstractFOSRestController;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use App\Form\ForgotPasswordType;
 use App\Entity\User;
 use App\Utils\PasswordGenerator;
 use App\Event\EmailForgotPasswordEvent;
 
-class ForgotPasswordController extends FOSRestController
+class ForgotPasswordController extends AbstractFOSRestController
 {
     /**
      * @Route(path="api/forgotPassword", name="forgot_password")

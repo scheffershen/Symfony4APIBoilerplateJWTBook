@@ -7,13 +7,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use FOS\RestBundle\Controller\FOSRestController;
+use FOS\RestBundle\Controller\AbstractFOSRestController;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use App\Form\UserType;
 use App\Entity\User;
 use App\Event\EmailRegistrationUserEvent;
 
-class RegistrationController extends FOSRestController
+class RegistrationController extends AbstractFOSRestController
 {
     /**
      * @Route(path="/api/register", name="registration")
